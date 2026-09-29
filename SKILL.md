@@ -16,13 +16,14 @@ Map the full implementation scope requested by the user before choosing initial 
 For each use case, identify the plan-level implementation responsibilities or capabilities required by already-settled requirements and design.
 Represent shared responsibilities once in the planning model.
 Treat semantic sharing as planning information; implementation may realize shared responsibilities separately or together according to later implementation decisions.
+Count a shared responsibility as established for another use case only when the same implementation result satisfies that use case.
 
 Identify dependencies between use cases and between those responsibilities.
 Identify which responsibilities are already established in the current state.
 
 ## Compare remaining work
 
-For each use case, derive the responsibilities still required beyond the established or projected state.
+For each use case, derive the responsibilities still unsatisfied by the established or projected results.
 Assess the incremental implementation effort and complexity of that remaining work.
 
 Evaluate the full set of viable use cases.
