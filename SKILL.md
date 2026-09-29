@@ -1,6 +1,6 @@
 ---
 name: use-case-driven-work
-description: Plan implementation by concrete use cases, mapping dependencies across the requested scope, comparing remaining plan-level work against established and projected results, and favoring lighter milestones when evidence supports a difference.
+description: Plan implementation by concrete use cases, splitting each use case into staged work, staggering progress across viable use cases, mapping dependencies across the requested scope, comparing remaining plan-level work against established and projected results, and favoring lighter milestones when evidence supports a difference.
 ---
 
 # Use-Case-Driven Work
@@ -26,6 +26,15 @@ Assess their incremental implementation effort and complexity from the available
 
 Prefer lighter viable use cases when the available information supports a difference.
 Keep tied or uncertain candidates at the same priority.
+
+## Stagger use-case progress
+
+Split each use case into multiple implementation steps that each establish a concrete result.
+
+For each use case, identify the earliest point where established or preceding planned results make its first useful step viable.
+Stagger the steps so later use cases enter at those points while earlier use cases continue through their remaining steps.
+
+Prefer this diagonal progression over layer-wide batching or completing each use case in sequence.
 
 ## Project the full plan
 
