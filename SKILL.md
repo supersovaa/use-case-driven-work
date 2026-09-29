@@ -1,20 +1,20 @@
 ---
 name: use-case-driven-work
-description: Plan implementation across concrete use cases by mapping dependencies over the requested scope, sequencing each work item when its prerequisites are satisfied, and exposing independent work that can overlap.
+description: Plan implementation by concrete use cases, mapping dependencies over the requested scope, sequencing each work item when its prerequisites are satisfied, and exposing independent work that can overlap.
 ---
 
 # Use-Case-Driven Work
 
-Use this skill when creating or revising an implementation plan that spans multiple concrete user-facing use cases.
+Use this skill when creating or revising an implementation plan.
 
-Use cases are the primary units for relating user-visible progress to implementation work.
+Use concrete user-facing use cases as the primary units for relating user-visible progress to implementation work.
 
 ## Map the requested scope
 
 Map the full implementation scope requested by the user before choosing the first work item.
 Identify the relevant use cases, the work required for each, and dependencies between work items across use cases.
 
-Keep the full requested scope visible so sequencing reflects dependencies across use cases rather than only the nearest work.
+Keep the full requested scope visible so sequencing reflects dependencies throughout the planned work.
 
 ## Sequence by dependencies
 
