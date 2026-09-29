@@ -1,6 +1,6 @@
 ---
 name: use-case-driven-work
-description: Plan implementation by concrete use cases, decomposing them into implementation elements, mapping dependencies across the requested scope, and preferring lightweight use cases that establish reusable progress early.
+description: Plan implementation by concrete use cases, comparing their remaining plan-level implementation responsibilities against established progress, mapping dependencies across the requested scope, and prioritizing lightweight milestones without imposing unnecessary order.
 ---
 
 # Use-Case-Driven Work
@@ -9,28 +9,35 @@ Use this skill when creating or revising an implementation plan.
 
 Use concrete user-facing use cases as the primary units for relating user-visible progress to implementation work.
 
-## Map use cases and elements
+## Map use cases and responsibilities
 
-Map the full implementation scope requested by the user before choosing the first work item.
-Decompose each use case into the implementation elements it needs, including elements shared by multiple use cases.
+Map the full implementation scope requested by the user before choosing initial work.
 
-Identify dependencies between use cases and between implementation elements.
-Also identify overlap and containment between the element sets required by different use cases.
+For each use case, identify the plan-level implementation responsibilities or capabilities required by already-settled requirements and design.
+Represent responsibilities shared by multiple use cases once rather than assigning or duplicating them arbitrarily.
 
-## Prefer lightweight use cases
+Identify dependencies between use cases and between those responsibilities.
+Identify which responsibilities are already established in the current state.
 
-Among viable use cases, prefer one that can be established with fewer or simpler new implementation elements.
+## Compare remaining work
 
-When one use case needs a subset of the elements required by another, prefer establishing the smaller use case first when dependencies allow.
-Reuse the established elements when extending the implementation to broader use cases.
+For each use case, derive the responsibilities still required beyond the established state.
+Assess the incremental implementation effort and complexity of that remaining work.
 
-Keep only ordering required by dependencies or this lightweight-first preference.
-Leave independent work unordered and expose it as parallelizable.
+Evaluate the full set of viable use cases.
+Prefer lighter use cases as implementation milestones, especially when establishing their remaining responsibilities also reduces the work needed by other use cases.
 
-## Replan the remaining scope
+## Preserve partial order
 
-When revising the plan after implementation results or repository changes, recompute the remaining use cases, elements, and dependencies from the current state.
-Prefer the lightest newly viable use cases while preserving reusable progress.
+Create required ordering only from dependencies.
+Lightweight-first is a priority when a sequencing choice is needed, not an additional dependency.
 
-This skill governs cross-use-case decomposition, dependency planning, and sequencing.
+Leave independent viable work unordered and expose it as parallelizable.
+
+## Replan from progress
+
+When revising the plan after implementation results or repository changes, recompute established responsibilities, remaining work, and dependencies across the full remaining scope.
+Reevaluate lightweight milestones from that current state while preserving reusable progress.
+
+This skill governs cross-use-case decomposition, dependency planning, and milestone priority.
 Detailed implementation-plan structure, design, implementation, delegation, and repository workflows belong to their respective skills.
