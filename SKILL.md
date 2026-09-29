@@ -20,6 +20,7 @@ Keep the full requested scope visible so sequencing reflects dependencies throug
 
 Derive ordering from prerequisites.
 Schedule each work item as soon as its prerequisites are satisfied, whichever use case it belongs to.
+Let work from different use cases interleave according to those dependencies.
 
 Show independent ready work as overlapping when the execution environment permits.
 
