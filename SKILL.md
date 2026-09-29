@@ -1,30 +1,32 @@
 ---
 name: use-case-driven-work
-description: Plan and progress work by concrete use cases, mapping dependencies across the requested scope, starting ready downstream work as soon as prerequisites are satisfied, and overlapping independent work when possible.
+description: Plan implementation across concrete use cases by mapping dependencies over the requested scope, sequencing each work item when its prerequisites are satisfied, and exposing independent work that can overlap.
 ---
 
 # Use-Case-Driven Work
 
-Use concrete user-facing use cases as the primary units of progress.
+Use this skill when creating or revising an implementation plan that spans multiple concrete user-facing use cases.
 
-## Plan the requested scope
+Use cases are the primary units for relating user-visible progress to implementation work.
 
-For planning requests, map the full scope requested by the user before selecting the first work item.
+## Map the requested scope
+
+Map the full implementation scope requested by the user before choosing the first work item.
 Identify the relevant use cases, the work required for each, and dependencies between work items across use cases.
 
-Keep the full requested scope visible while choosing what can start next.
+Keep the full requested scope visible so sequencing reflects dependencies across use cases rather than only the nearest work.
 
-## Advance by dependencies
+## Sequence by dependencies
 
-Start each work item once its prerequisites are satisfied.
-Allow downstream work from later use cases to begin as soon as the required results from earlier work are available.
+Derive ordering from prerequisites.
+Schedule each work item as soon as its prerequisites are satisfied, whichever use case it belongs to.
 
-Overlap independent ready work when the execution environment permits.
+Show independent ready work as overlapping when the execution environment permits.
 
-## Replan from the current state
+## Replan the remaining scope
 
-After each meaningful result, recompute the remaining execution order across the requested scope from the current dependency state.
-Continue through the use cases using the updated dependency state.
+When revising the plan after implementation results or repository changes, recompute the remaining execution order across the requested scope from the current dependency state.
+Update newly ready work across all remaining use cases.
 
-This skill governs planning and sequencing across use cases.
-Design, implementation, delegation, and repository workflows belong to their respective skills.
+This skill governs cross-use-case dependency planning and sequencing.
+Detailed implementation-plan structure, design, implementation, delegation, and repository workflows belong to their respective skills.
