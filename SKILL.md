@@ -1,28 +1,51 @@
 ---
 name: use-case-driven-work
-description: Progress work by concrete use cases, starting downstream work as soon as its dependencies are satisfied and overlapping independent work when possible.
+description: Plan implementation by concrete use cases, mapping dependencies across the requested scope, comparing remaining plan-level work against established and projected results, and favoring lighter milestones when evidence supports a difference.
 ---
 
 # Use-Case-Driven Work
 
-Use concrete user-facing use cases as the primary units of progress.
+Use this skill when creating or revising an implementation plan.
 
-## Start from a use case
+Use concrete user-facing use cases as the primary units for relating user-visible progress to implementation work.
 
-Choose the smallest concrete use case that can be carried through the relevant stages.
-Identify the work required to establish that use case and its direct dependencies.
+## Map the requested scope
 
-## Advance by dependencies
+Map the full requested implementation scope before choosing initial work.
 
-Start each work item once its prerequisites are satisfied.
-Allow work for the next use case to begin as soon as the required results from the preceding work are available.
+For each use case, identify the plan-level responsibilities or capabilities required by settled requirements and design.
+Identify dependencies between use cases and between those responsibilities.
+Identify implementation results already established in the current state.
 
-Overlap independent ready work when the execution environment permits.
+Apply cross-use-case reuse only where settled requirements, design, repository state, or plan boundaries establish that the same result satisfies each use case.
 
-## Continue incrementally
+## Compare remaining work
 
-After each meaningful result, derive newly ready work from the current dependency state.
-Continue through subsequent use cases in the same manner.
+For each use case, derive the additional responsibilities required beyond established or projected results.
+Assess their incremental implementation effort and complexity from the available planning information.
 
-This skill governs the sequencing of work across use cases.
-Planning, design, implementation, delegation, and repository workflows belong to their respective skills.
+Prefer lighter viable use cases when the available information supports a difference.
+Keep tied or uncertain candidates at the same priority.
+
+## Project the full plan
+
+Build the plan across the full requested scope.
+
+From the established state, project the results each planned milestone would establish.
+Recompute affected remaining work from that projected state and continue until the requested scope is represented.
+
+Keep independent branches separate while projecting progress.
+
+## Preserve partial order
+
+Dependencies define required ordering.
+Lightweight-first guides priority among viable alternatives.
+
+Leave independent viable work unordered and expose it as parallelizable.
+
+## Replan from progress
+
+After implementation results or repository changes, repeat the mapping, comparison, and projection from the current state across the remaining scope.
+
+This skill governs cross-use-case decomposition, dependency planning, projected progress, and milestone priority.
+Detailed implementation-plan structure, design, implementation, delegation, and repository workflows belong to their respective skills.
