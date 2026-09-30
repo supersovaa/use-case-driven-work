@@ -1,6 +1,6 @@
 ---
 name: use-case-driven-work
-description: Plan and review implementation by concrete use cases, splitting each use case into staged work, arranging overlapping step streams across viable use cases, mapping dependencies across the requested scope, comparing remaining plan-level work against established and projected results, reviewing established use cases through behavioral test coverage, and favoring lighter milestones when evidence supports a difference.
+description: Plan and review implementation by concrete use cases, incrementally revising existing plans through established dependencies, splitting each use case into staged work, arranging overlapping step streams across viable use cases, mapping dependencies across the requested scope, comparing remaining plan-level work against established and projected results, reviewing established use cases through behavioral test coverage, and favoring lighter milestones when evidence supports a difference.
 ---
 
 # Use-Case-Driven Work
@@ -8,6 +8,11 @@ description: Plan and review implementation by concrete use cases, splitting eac
 Use this skill when creating or revising an implementation plan or reviewing implementation progress.
 
 Use concrete user-facing use cases as the primary units for relating user-visible progress to implementation work.
+
+Keep plan-level dependencies and the results established by planned work explicit enough to support incremental revision.
+
+For a new plan, perform the mapping, comparison, arrangement, and projection below.
+For an existing plan, revise it incrementally from its established planning state.
 
 ## Map the requested scope
 
@@ -47,6 +52,12 @@ Recompute affected remaining work from that projected state and continue until t
 
 Keep independent branches separate while projecting progress.
 
+## Revise incrementally
+
+When revising an existing plan, reuse established plan relationships and update the affected portion.
+Treat new implementation results and newly established dependencies as changes to the planning state.
+Propagate changes through dependent planned work until its dependencies are satisfied again.
+
 ## Review by use-case behavior
 
 For each use case established by the current implementation step, verify that tests cover every behavior the use case is responsible for preserving.
@@ -65,9 +76,5 @@ Lightweight-first guides priority among viable alternatives.
 
 Leave independent viable work unordered and expose it as parallelizable.
 
-## Replan from progress
-
-After implementation results or repository changes, repeat the mapping, comparison, and projection from the current state across the remaining scope.
-
-This skill governs cross-use-case decomposition, dependency planning, projected progress, milestone priority, and use-case-level review coverage.
+This skill governs cross-use-case decomposition, dependency planning, incremental plan revision, projected progress, milestone priority, and use-case-level review coverage.
 Detailed implementation-plan structure, design, implementation, delegation, and repository workflows belong to their respective skills.
