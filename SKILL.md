@@ -11,6 +11,9 @@ Use concrete user-facing use cases as the primary units for relating user-visibl
 
 Keep plan-level dependencies and the results established by planned work explicit enough to support incremental revision.
 
+For a new plan, perform the mapping, comparison, arrangement, and projection below.
+For an existing plan, revise it incrementally from its established planning state.
+
 ## Map the requested scope
 
 Map the full requested implementation scope before choosing initial work.
