@@ -51,6 +51,9 @@ Keep independent branches separate while projecting progress.
 
 For each use case established by the current implementation step, verify that tests cover every behavior the use case is responsible for preserving.
 
+For each previously established use case affected by the implementation step, preserve the behavioral intent of its tests.
+Tests may evolve with the implementation while continuing to verify the behavior they previously protected.
+
 For behavior that emerges from combining use cases, assign its test to the earliest implementation step where all participating use cases are established.
 Review each implementation step against behavior whose required use cases are established by that step.
 Carry later combined behavior with its assigned future step.
