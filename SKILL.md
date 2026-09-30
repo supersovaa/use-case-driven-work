@@ -1,6 +1,6 @@
 ---
 name: use-case-driven-work
-description: Plan and review implementation by concrete use cases, splitting each use case into staged work, arranging overlapping step streams across viable use cases, mapping dependencies across the requested scope, comparing remaining plan-level work against established and projected results, reviewing established use cases through behavioral test coverage, and favoring lighter milestones when evidence supports a difference.
+description: Plan and review implementation by concrete use cases, incrementally revising existing plans through established dependencies, splitting each use case into staged work, arranging overlapping step streams across viable use cases, mapping dependencies across the requested scope, comparing remaining plan-level work against established and projected results, reviewing established use cases through behavioral test coverage, and favoring lighter milestones when evidence supports a difference.
 ---
 
 # Use-Case-Driven Work
