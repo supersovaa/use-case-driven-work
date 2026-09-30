@@ -52,6 +52,7 @@ Keep independent branches separate while projecting progress.
 ## Revise incrementally
 
 When revising an existing plan, reuse established plan relationships and update the affected portion.
+Treat new implementation results and newly established dependencies as changes to the planning state.
 Propagate changes through dependent planned work until its dependencies are satisfied again.
 
 ## Review by use-case behavior
@@ -71,10 +72,6 @@ Dependencies define required ordering.
 Lightweight-first guides priority among viable alternatives.
 
 Leave independent viable work unordered and expose it as parallelizable.
-
-## Replan from progress
-
-When new implementation results or newly established dependencies affect the remaining plan, update the affected planning state and propagate their effects through dependent remaining work.
 
 This skill governs cross-use-case decomposition, dependency planning, incremental plan revision, projected progress, milestone priority, and use-case-level review coverage.
 Detailed implementation-plan structure, design, implementation, delegation, and repository workflows belong to their respective skills.
