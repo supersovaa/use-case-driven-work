@@ -22,7 +22,9 @@ For each use case, identify the plan-level responsibilities or capabilities requ
 Identify dependencies between use cases and between those responsibilities.
 Identify implementation results already established in the current state.
 
-Apply cross-use-case reuse only where settled requirements, design, repository state, or plan boundaries establish that the same result satisfies each use case.
+When required behavior overlaps behavior already established or also required by another planned use case, decompose the affected use cases enough to expose the shared responsibility or capability.
+Represent the shared behavior with one established or planned result and make each affected use case depend on that result.
+Apply this reuse only where settled requirements, design, repository state, or plan boundaries establish that the same behavior satisfies each use case.
 
 ## Compare remaining work
 
