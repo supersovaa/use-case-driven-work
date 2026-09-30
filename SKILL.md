@@ -9,6 +9,8 @@ Use this skill when creating or revising an implementation plan or reviewing imp
 
 Use concrete user-facing use cases as the primary units for relating user-visible progress to implementation work.
 
+Keep plan-level dependencies and the results established by planned work explicit enough to support incremental revision.
+
 ## Map the requested scope
 
 Map the full requested implementation scope before choosing initial work.
@@ -47,6 +49,11 @@ Recompute affected remaining work from that projected state and continue until t
 
 Keep independent branches separate while projecting progress.
 
+## Revise incrementally
+
+When revising an existing plan, reuse established plan relationships and update the affected portion.
+Propagate changes through dependent planned work until its dependencies are satisfied again.
+
 ## Review by use-case behavior
 
 For each use case established by the current implementation step, verify that tests cover every behavior the use case is responsible for preserving.
@@ -67,7 +74,7 @@ Leave independent viable work unordered and expose it as parallelizable.
 
 ## Replan from progress
 
-After implementation results or repository changes, repeat the mapping, comparison, and projection from the current state across the remaining scope.
+When new implementation results or newly established dependencies affect the remaining plan, update the affected planning state and propagate their effects through dependent remaining work.
 
-This skill governs cross-use-case decomposition, dependency planning, projected progress, milestone priority, and use-case-level review coverage.
+This skill governs cross-use-case decomposition, dependency planning, incremental plan revision, projected progress, milestone priority, and use-case-level review coverage.
 Detailed implementation-plan structure, design, implementation, delegation, and repository workflows belong to their respective skills.
