@@ -1,11 +1,11 @@
 ---
 name: use-case-driven-work
-description: Plan implementation by concrete use cases, splitting each use case into staged work, arranging overlapping step streams across viable use cases, mapping dependencies across the requested scope, comparing remaining plan-level work against established and projected results, and favoring lighter milestones when evidence supports a difference.
+description: Plan and review implementation by concrete use cases, splitting each use case into staged work, arranging overlapping step streams across viable use cases, mapping dependencies across the requested scope, comparing remaining plan-level work against established and projected results, reviewing established use cases through behavioral test coverage, and favoring lighter milestones when evidence supports a difference.
 ---
 
 # Use-Case-Driven Work
 
-Use this skill when creating or revising an implementation plan.
+Use this skill when creating or revising an implementation plan or reviewing implementation progress.
 
 Use concrete user-facing use cases as the primary units for relating user-visible progress to implementation work.
 
@@ -47,6 +47,17 @@ Recompute affected remaining work from that projected state and continue until t
 
 Keep independent branches separate while projecting progress.
 
+## Review by use-case behavior
+
+For each use case established by the current implementation step, verify that tests cover every behavior the use case is responsible for preserving.
+
+For each previously established use case affected by the implementation step, preserve the behavioral intent of its tests.
+Tests may evolve with the implementation while continuing to verify the behavior they previously protected.
+
+For behavior that emerges from combining use cases, assign its test to the earliest implementation step where all participating use cases are established.
+Review each implementation step against behavior whose required use cases are established by that step.
+Carry later combined behavior with its assigned future step.
+
 ## Preserve partial order
 
 Dependencies define required ordering.
@@ -58,5 +69,5 @@ Leave independent viable work unordered and expose it as parallelizable.
 
 After implementation results or repository changes, repeat the mapping, comparison, and projection from the current state across the remaining scope.
 
-This skill governs cross-use-case decomposition, dependency planning, projected progress, and milestone priority.
+This skill governs cross-use-case decomposition, dependency planning, projected progress, milestone priority, and use-case-level review coverage.
 Detailed implementation-plan structure, design, implementation, delegation, and repository workflows belong to their respective skills.
