@@ -1,11 +1,11 @@
 ---
-name: use-case-driven-work
-description: Plan and review implementation from concrete use cases, growing planning state incrementally as responsibilities and dependencies become relevant, splitting use cases into staged work, arranging viable progress across use cases, comparing remaining work against established and projected results, reviewing established use cases through behavioral test coverage, and favoring lighter milestones when evidence supports a difference.
+name: planning
+description: Plan implementation from concrete user-facing use cases by growing planning state incrementally, deriving direct dependencies, reusing shared results, arranging viable staged progress, and revising only affected planned work.
 ---
 
-# Use-Case-Driven Work
+# Planning
 
-Use this skill when creating or revising an implementation plan or reviewing implementation progress.
+Use this skill when creating or revising an implementation plan from concrete user-facing use cases.
 
 Use concrete user-facing use cases as the primary units for relating user-visible progress to implementation work.
 
@@ -67,17 +67,6 @@ Follow dependent planned work when a changed result affects its requirements or 
 
 Preserve established planning state outside the affected work.
 
-## Review by use-case behavior
-
-For each use case established by the current implementation step, verify that tests cover every behavior the use case is responsible for preserving.
-
-For each previously established use case affected by the implementation step, preserve the behavioral intent of its tests.
-Tests may evolve with the implementation while continuing to verify the behavior they previously protected.
-
-For behavior that emerges from combining use cases, assign its test to the earliest implementation step where all participating use cases are established.
-Review each implementation step against behavior whose required use cases are established by that step.
-Carry later combined behavior with its assigned future step.
-
 ## Preserve partial order
 
 Dependencies define required ordering.
@@ -85,5 +74,5 @@ Lightweight-first guides priority among viable alternatives.
 
 Leave independent viable work unordered and expose it as parallelizable.
 
-This skill governs incremental cross-use-case decomposition, dependency planning, plan revision, projected progress, milestone priority, and use-case-level review coverage.
-Detailed implementation-plan structure, design, implementation, delegation, and repository workflows belong to their respective skills.
+This skill governs incremental cross-use-case decomposition, dependency planning, plan revision, projected progress, and milestone priority.
+Detailed implementation-plan structure, design, implementation, delegation, review, and repository workflows belong to their respective skills.
