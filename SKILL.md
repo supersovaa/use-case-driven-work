@@ -29,7 +29,7 @@ Continue until the requested use cases are represented by enough planning struct
 
 ## Compare remaining work
 
-Among use cases that are currently viable to plan or advance, derive the additional responsibilities required beyond established or already planned results.
+When choosing what to plan or advance next, compare the viable use cases currently under consideration by deriving the additional responsibilities required beyond established or already planned results.
 Assess their incremental implementation effort and complexity from the available planning information.
 
 Prefer lighter viable use cases when the available information supports a difference.
@@ -43,7 +43,6 @@ When established or preceding planned results make another use case viable, add 
 Carry remaining steps forward as their dependencies become satisfied.
 
 Interleave viable use-case steps when this produces earlier user-visible progress.
-Keep independent viable work unordered when no ordering is required.
 
 ## Project incrementally
 
