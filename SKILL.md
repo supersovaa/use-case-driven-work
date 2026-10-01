@@ -22,8 +22,6 @@ Add dependencies when they determine ordering, reuse, blocking, or the result es
 Extend the planning state as later use cases reveal additional relevant relationships.
 
 Before adding work for a new use case, inspect existing implementation paths that already establish the same responsibility.
-When the use case would add another path, consider whether reorganizing that responsibility first would produce a simpler, more coherent implementation boundary.
-Add prerequisite refactoring to the planning state when that restructuring is part of establishing the current use case.
 
 When required behavior overlaps behavior already established or required by another planned use case, decompose the affected work enough to expose the shared responsibility or capability.
 Represent the shared behavior with one established or planned result and make each affected use case depend on that result.
