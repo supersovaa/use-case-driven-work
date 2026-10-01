@@ -22,7 +22,7 @@ Add dependencies when they determine ordering, reuse, blocking, or the result es
 Derive them from the prerequisite results required for each planned result to be established and validated in repository behavior.
 When a use case combines results that can be established independently, keep their producing steps independent and place the dependency on the first planned result that requires the combination.
 Treat implementation scope and dependency separately: a prerequisite result may stay outside the dependent step's scope.
-Record direct dependency edges to the prerequisite results a step requires directly; earlier prerequisites remain reachable through those results' own dependencies.
+Represent only direct dependency edges to the prerequisite results a step requires directly; earlier prerequisites remain reachable through those results' own dependencies.
 Use isolated test setup as evidence about a result's independent validity rather than as the definition of repository dependencies.
 Extend the planning state as later use cases reveal additional relevant relationships.
 
