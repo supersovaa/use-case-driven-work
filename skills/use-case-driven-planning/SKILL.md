@@ -1,9 +1,9 @@
 ---
-name: planning
+name: use-case-driven-planning
 description: Plan implementation from concrete user-facing use cases by growing planning state incrementally, deriving direct dependencies, reusing shared results, arranging viable staged progress, and revising only affected planned work.
 ---
 
-# Planning
+# Use-Case-Driven Planning
 
 Use this skill when creating or revising an implementation plan from concrete user-facing use cases.
 

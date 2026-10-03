@@ -1,9 +1,9 @@
 ---
-name: review
+name: use-case-driven-review
 description: Review implementation progress by verifying behavioral test coverage for newly established, affected, and combined concrete user-facing use cases at the earliest step where their required behavior is established.
 ---
 
-# Review
+# Use-Case-Driven Review
 
 Use this skill when reviewing implementation progress against concrete user-facing use cases.
 
