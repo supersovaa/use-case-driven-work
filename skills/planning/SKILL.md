@@ -31,6 +31,10 @@ Before adding work for a new use case, inspect existing implementation paths tha
 When required behavior overlaps behavior already established or required by another planned use case, decompose the affected work enough to expose the shared responsibility or capability.
 Represent the shared behavior with one established or planned result and make each affected use case depend on that result.
 Apply this reuse where settled requirements, design, repository state, or plan boundaries establish that the same behavior satisfies each use case.
+Treat reuse as a dependency only when the planned responsibility allocation requires the dependent work to use an established or planned result that provides the needed responsibility, capability, or behavior.
+Do not derive a dependency merely because implementation artifacts such as helpers, functions, types, internal APIs, or modules can be reused.
+When uncertain, describe the reused result without referring to implementation artifact names.
+If it cannot be stated as a prerequisite result in planning terms, do not use implementation reuse alone as the basis for a dependency.
 
 Continue until the requested use cases are represented by enough planning structure to guide their implementation.
 
