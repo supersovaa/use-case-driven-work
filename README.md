@@ -11,7 +11,14 @@ Planning grows only the structure needed for the use cases being considered, whi
 
 `use-case-driven-planning` owns incremental cross-use-case decomposition, direct dependency planning, plan revision, projected progress, and milestone priority.
 
-`use-case-driven-review` owns use-case-level behavioral review coverage for newly established, affected, and combined use cases.
+`use-case-driven-review` owns use-case-level selection and timing of behavioral test-evidence review for newly established, affected, and combined use cases.
+
+## Repository dependency
+
+This repository depends on [`requirement-driven-testing`](https://github.com/supersovaa/requirement-driven-testing) for executable test-evidence responsibilities.
+
+Within use-case-driven review, `test-evidence-review` owns the criteria for judging whether the selected behavior has sufficient executable test evidence.
+Test-evidence preservation and remediation remain with the corresponding skills in that dependency rather than being redefined here.
 
 ## Adjacent responsibilities
 
