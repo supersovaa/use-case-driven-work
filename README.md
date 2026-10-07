@@ -17,7 +17,7 @@ Planning grows only the structure needed for the use cases being considered, whi
 
 This repository depends on [`requirement-driven-testing`](https://github.com/supersovaa/requirement-driven-testing) for executable test-evidence responsibilities.
 
-Within use-case-driven review, `test-evidence-review` owns the criteria for judging whether the selected behavior has sufficient executable test evidence.
+Within use-case-driven review, the selected behavior scopes the settled required test definitions to review. Missing required test definitions return to `test-evidence-planning`, while `test-evidence-review` owns the criteria for judging whether those settled definitions have sufficient executable evidence.
 Test-evidence preservation and remediation remain with the corresponding skills in that dependency rather than being redefined here.
 
 ## Adjacent responsibilities
