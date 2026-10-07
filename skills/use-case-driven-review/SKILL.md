@@ -17,9 +17,12 @@ For behavior that emerges from combining use cases, assign its test-evidence rev
 Review each implementation step against behavior whose required use cases are established by that step.
 Carry later combined behavior with its assigned future step.
 
-Apply `test-evidence-review` to the resulting behavior set within the surrounding review scope.
+Use the resulting behavior set to select the settled required test definitions that fall within the surrounding review scope.
+Apply `test-evidence-review` to those definitions.
+When the selected behavior lacks settled required test definitions, return that scope to `test-evidence-planning` rather than deriving test cases during review.
 
 This skill owns use-case-level selection and timing of behavioral test-evidence review.
+Required test-case definition belongs to `test-evidence-planning`.
 Test-evidence sufficiency belongs to `test-evidence-review`.
 Test-evidence preservation and remediation belong to the corresponding skills in the repository's `requirement-driven-testing` dependency.
 General code review, implementation-plan acceptance, implementation, planning, delegation, and repository workflows belong to their respective skills.
