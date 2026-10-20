@@ -76,7 +76,7 @@ Preserve established planning state outside the affected work.
 Dependencies define required ordering.
 Lightweight-first guides priority among viable alternatives.
 
-Leave independent viable work unordered and expose it as parallelizable.
+Keep viable work without result dependencies unordered; determine whether it can be implemented concurrently through the ordinary implementation-planning workflow's concrete concurrency-conflict assessment.
 
 This skill governs incremental cross-use-case decomposition, dependency planning, plan revision, projected progress, and milestone priority.
 Detailed implementation-plan structure, design, implementation, delegation, review, and repository workflows belong to their respective skills.
