@@ -1,28 +1,30 @@
 # Use-Case-Driven Work
 
-A lightweight pair of skills for planning and reviewing implementation work around concrete user-facing use cases.
-
-## Core idea
-
-Concrete user-facing use cases are the shared unit for relating implementation progress to planned responsibilities and behavioral test coverage.
-Planning grows only the structure needed for the use cases being considered, while review verifies behavior when the required use cases become established.
+Use concrete user-facing use cases as completion targets for implementation planning and behavior-based review.
 
 ## Skills
 
-`use-case-driven-planning` owns incremental cross-use-case decomposition, direct dependency planning, plan revision, projected progress, and milestone priority.
+- [use-case-driven-planning](skills/use-case-driven-planning/SKILL.md) — use when creating or revising implementation plans for user-facing use cases; define each use case's required behavior and independently verifiable partial results.
+- [use-case-driven-review](skills/use-case-driven-review/SKILL.md) — use when reviewing implementation progress against established, affected, and combined use-case behavior.
 
-`use-case-driven-review` owns use-case-level selection and timing of behavioral test-evidence review for newly established, affected, and combined use cases.
+## Planning workflow
 
-## Repository dependency
+Use [plan-driven-planning](https://github.com/supersovaa/plan-driven-implementation/blob/main/skills/plan-driven-planning/SKILL.md) for implementation-plan boundaries, direct-dependency semantics, persistent state, and general concurrency constraints.
 
-This repository depends on [`requirement-driven-testing`](https://github.com/supersovaa/requirement-driven-testing) for executable test-evidence responsibilities.
+Use [diagonal-progress-planning](https://github.com/supersovaa/diagonal-progress-planning/blob/main/SKILL.md) for staged progress through one use case's partial results or across multiple use cases, cross-use-case dependencies when needed, grounded lightweight-first priorities, incremental projections, and affected-progress revision.
+This follows the local planning and staged progress separation used by [cell-complete-development](https://github.com/supersovaa/cell-complete-development), without requiring the Cell workflow's synchronized waves or Cell-specific test completion rules.
+Unrelated use cases may advance while cross-use-case analysis is incomplete elsewhere.
 
-Within use-case-driven review, the selected behavior scopes the settled required test definitions to review. Missing required test definitions return to `test-evidence-planning`, while `test-evidence-review` owns the criteria for judging whether those settled definitions have sufficient executable evidence.
-Test-evidence preservation and remediation remain with the corresponding skills in that dependency rather than being redefined here.
+## Verification and other responsibilities
 
-## Adjacent responsibilities
+This repository depends on [requirement-driven-testing](https://github.com/supersovaa/requirement-driven-testing).
+Use-case review selects applicable settled required test definitions for newly established, affected, and combined use-case behavior.
+Missing definitions return to `test-evidence-planning`; `test-evidence-review` judges executable evidence, and the preservation and remediation skills retain their respective responsibilities.
 
-Detailed implementation-plan structure belongs to the planning workflow that defines that structure.
-Implementation execution, general code review, delegation, and repository operations belong to their respective skills.
+Detailed implementation execution, general code review, delegation, and repository operations remain with their respective skills.
 
-Executable behavior and detailed operational rules remain in each skill's `SKILL.md`.
+## Installation
+
+Install `skills/use-case-driven-planning/` and `skills/use-case-driven-review/` as separate skills under your agent's skill loader, retaining each directory's `SKILL.md`.
+For use-case planning, also install `plan-driven-planning` and `diagonal-progress-planning`.
+For behavioral evidence review, make the relevant `requirement-driven-testing` skills available.

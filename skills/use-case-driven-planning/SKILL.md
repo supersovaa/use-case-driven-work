@@ -1,82 +1,43 @@
 ---
 name: use-case-driven-planning
-description: Plan implementation from concrete user-facing use cases by growing planning state incrementally, deriving direct dependencies, reusing shared results, arranging viable staged progress, and revising only affected planned work.
+description: Plan concrete user-facing use cases by decomposing behavior into independently verifiable partial results and using shared diagonal progress planning for one or more use cases.
 ---
 
 # Use-Case-Driven Planning
 
-Use this skill when creating or revising an implementation plan from concrete user-facing use cases.
+Use this skill when creating or revising implementation plans for concrete user-facing use cases.
 
-Use concrete user-facing use cases as the primary units for relating user-visible progress to implementation work.
+Use a concrete user-facing use case as the completion target for relating implementation progress to observable behavior.
+Use ordinary `plan-driven-planning` for settled design provenance, implementation-plan structure, dependencies, authoritative state, and concurrency constraints.
+Apply `diagonal-progress-planning` to arrange and revise useful staged progress, whether one or several use cases are being planned. Its cross-use-case coordination applies when multiple use cases are relevant.
 
-Grow the planning state incrementally from the use cases currently being planned.
-A new plan starts from the implementation results and settled requirements already known.
-An existing plan starts from its established planning state.
+## Plan the use-case boundary
 
-## Grow planning state from use cases
+Begin with settled requirements, established implementation results, and the current repository planning state.
+For each requested use case, identify the behavior that establishes its completion and the responsibilities or capabilities needed to deliver it.
 
-For each use case being planned, identify the responsibilities or capabilities needed to establish its required behavior.
-Relate it to implementation results already established or already planned when those results affect the work.
+Decompose the use case into plans that each establish a meaningful partial result.
+Split a planned result when it contains independently establishable and verifiable outcomes; keep outcomes together when their implementation or meaningful validation is inseparable.
+Define only the directly required prerequisites within the currently considered use case using ordinary dependency semantics.
+Keep future work unplanned where available information does not yet justify a concrete plan boundary.
 
-Add dependencies when they determine ordering, reuse, blocking, or the result established by a planned step.
-Derive them from the prerequisite results required for each planned result to be established and validated in repository behavior.
-When a use case combines results that can be established independently, keep their producing steps independent and place the dependency on the first planned result that requires the combination.
-Treat implementation scope and dependency separately: a prerequisite result may stay outside the dependent step's scope.
-Represent only direct dependency edges to the prerequisite results a step requires directly; earlier prerequisites remain reachable through those results' own dependencies.
-Use isolated test setup as evidence about a result's independent validity rather than as the definition of repository dependencies.
-Extend the planning state as later use cases reveal additional relevant relationships.
+Relate each use case to relevant already-established or planned results.
+When a required responsibility is already provided by another implementation result, reference its authoritative producing plan rather than planning a second owner.
+A plan may appear under multiple use-case views while retaining one authoritative plan state.
+Use `diagonal-progress-planning` to resolve newly discovered shared-result relationships and cross-use-case prerequisites.
 
-Before adding work for a new use case, inspect existing implementation paths that already establish the same responsibility.
+## Preserve useful behavioral progress
 
-When required behavior overlaps behavior already established or required by another planned use case, decompose the affected work enough to expose the shared responsibility or capability.
-Represent the shared behavior with one established or planned result and make each affected use case depend on that result.
-Apply this reuse where settled requirements, design, repository state, or plan boundaries establish that the same behavior satisfies each use case.
-Treat reuse as a dependency only when the planned responsibility allocation requires the dependent work to use an established or planned result that provides the needed responsibility, capability, or behavior.
-Do not derive a dependency merely because implementation artifacts such as helpers, functions, types, internal APIs, or modules can be reused.
-When uncertain, describe the reused result without referring to implementation artifact names.
-If it cannot be stated as a prerequisite result in planning terms, do not use implementation reuse alone as the basis for a dependency.
+Express each partial result in terms of what becomes establishable and verifiable for the use case.
+Assign its completion obligations to the plan that can first establish them; keep behavior requiring further use cases with the later responsible plan.
+Use `diagonal-progress-planning` to project the useful partial results of a single use case or interleave eligible results across multiple use cases. It owns priority comparisons among viable alternatives.
+When a changed result affects the staged progression within a use case or across several use cases, use that skill to revise the affected projection and ordinary plan-driven rules for authoritative plan changes.
 
-Continue until the requested use cases are represented by enough planning structure to guide their implementation.
+## Hand off verification
 
-## Compare remaining work
+Keep the required observable behavior and the plan that establishes it identifiable so `use-case-driven-review` can select the affected behavior for test-evidence review.
+Required test definitions and sufficient executable evidence belong to the respective test-evidence skills.
+Implementation execution and code review follow their usual workflows; diagonal progress does not require synchronized waves.
 
-When choosing what to plan or advance next, compare the viable use cases currently under consideration by deriving the additional responsibilities required beyond established or already planned results.
-Assess their incremental implementation effort and complexity from the available planning information.
-
-Prefer lighter viable use cases when the available information supports a difference.
-Keep tied or uncertain candidates at the same priority.
-
-## Arrange incremental progress
-
-Split a use case into implementation steps that each establish a concrete result as that use case is added to the plan.
-
-When established or preceding planned results make another use case viable, add its first useful step at that point.
-Carry remaining steps forward as their dependencies become satisfied.
-
-Interleave viable use-case steps when this produces earlier user-visible progress.
-
-## Project incrementally
-
-Project the results needed to place the work currently being planned.
-After adding a planned milestone, treat its projected result as part of the planning state and reassess work affected by that result.
-
-Extend projection as needed until the requested use cases are represented.
-Keep independent branches separate while projecting progress.
-
-## Revise incrementally
-
-When revising an existing plan, start from its established planning state and update the changed portion.
-Treat new implementation results and newly established dependencies as changes to that state.
-Follow dependent planned work when a changed result affects its requirements or ordering, and continue until the affected planning state is consistent again.
-
-Preserve established planning state outside the affected work.
-
-## Preserve partial order
-
-Dependencies define required ordering.
-Lightweight-first guides priority among viable alternatives.
-
-Leave independent viable work unordered; concurrent implementation eligibility is determined by the ordinary implementation-planning workflow's concrete concurrency-conflict assessment.
-
-This skill governs incremental cross-use-case decomposition, dependency planning, plan revision, projected progress, and milestone priority.
-Detailed implementation-plan structure, design, implementation, delegation, review, and repository workflows belong to their respective skills.
+This skill owns use-case completion targets, use-case-local decomposition, and behavioral progress attribution.
+`diagonal-progress-planning` owns staged progress within or across use cases, cross-use-case dependencies when needed, incremental projection, and affected-progress revision.
