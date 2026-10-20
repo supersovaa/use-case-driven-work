@@ -1,6 +1,6 @@
 ---
 name: use-case-driven-planning
-description: Plan concrete user-facing use cases by decomposing their behavior into independently verifiable partial results while using shared diagonal progress planning for cross-use-case coordination.
+description: Plan concrete user-facing use cases by decomposing behavior into independently verifiable partial results and using shared diagonal progress planning for one or more use cases.
 ---
 
 # Use-Case-Driven Planning
@@ -9,7 +9,7 @@ Use this skill when creating or revising implementation plans for concrete user-
 
 Use a concrete user-facing use case as the completion target for relating implementation progress to observable behavior.
 Use ordinary `plan-driven-planning` for settled design provenance, implementation-plan structure, dependencies, authoritative state, and concurrency constraints.
-Apply `diagonal-progress-planning` when multiple use cases need coordinated results, staged progress, priority comparisons, or affected-progress revision.
+Apply `diagonal-progress-planning` to arrange and revise useful staged progress, whether one or several use cases are being planned. Its cross-use-case coordination applies when multiple use cases are relevant.
 
 ## Plan the use-case boundary
 
@@ -30,8 +30,8 @@ Use `diagonal-progress-planning` to resolve newly discovered shared-result relat
 
 Express each partial result in terms of what becomes establishable and verifiable for the use case.
 Assign its completion obligations to the plan that can first establish them; keep behavior requiring further use cases with the later responsible plan.
-Use `diagonal-progress-planning` to determine when another use case becomes viable and to compare light, useful progress across use cases.
-When a changed result affects other use cases, send the affected cross-use-case projection to that skill and use ordinary plan-driven rules for changes to authoritative plans.
+Use `diagonal-progress-planning` to project the useful partial results of a single use case or interleave eligible results across multiple use cases. It owns priority comparisons among viable alternatives.
+When a changed result affects the staged progression within a use case or across several use cases, use that skill to revise the affected projection and ordinary plan-driven rules for authoritative plan changes.
 
 ## Hand off verification
 
@@ -40,4 +40,4 @@ Required test definitions and sufficient executable evidence belong to the respe
 Implementation execution and code review follow their usual workflows; diagonal progress does not require synchronized waves.
 
 This skill owns use-case completion targets, use-case-local decomposition, and behavioral progress attribution.
-`diagonal-progress-planning` owns cross-use-case dependencies, coarse diagonal order, incremental projection, and affected-progress revision.
+`diagonal-progress-planning` owns staged progress within or across use cases, cross-use-case dependencies when needed, incremental projection, and affected-progress revision.
