@@ -11,8 +11,8 @@ Use concrete user-facing use cases as completion targets for implementation plan
 
 Use [plan-driven-planning](https://github.com/supersovaa/plan-driven-implementation/blob/main/skills/plan-driven-planning/SKILL.md) for implementation-plan boundaries, direct-dependency semantics, persistent state, and general concurrency constraints.
 
-Use [diagonal-progress-planning](https://github.com/supersovaa/diagonal-progress-planning/blob/main/SKILL.md) for cross-use-case result dependencies, coarse implementation order, lightweight-first priorities among grounded alternatives, incremental progress projections, and revision of the affected planning scope.
-This follows the local-versus-cross planning separation used by [cell-complete-development](https://github.com/supersovaa/cell-complete-development), without requiring the Cell workflow's synchronized waves or Cell-specific test completion rules.
+Use [diagonal-progress-planning](https://github.com/supersovaa/diagonal-progress-planning/blob/main/SKILL.md) for staged progress through one use case's partial results or across multiple use cases, cross-use-case dependencies when needed, grounded lightweight-first priorities, incremental projections, and affected-progress revision.
+This follows the local planning and staged progress separation used by [cell-complete-development](https://github.com/supersovaa/cell-complete-development), without requiring the Cell workflow's synchronized waves or Cell-specific test completion rules.
 Unrelated use cases may advance while cross-use-case analysis is incomplete elsewhere.
 
 ## Verification and other responsibilities
