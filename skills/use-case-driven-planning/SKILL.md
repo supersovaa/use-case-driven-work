@@ -22,8 +22,9 @@ Define only the directly required prerequisites within the currently considered 
 Keep future work unplanned where available information does not yet justify a concrete plan boundary.
 
 Relate each use case to relevant already-established or planned results.
-When a required responsibility is already provided by another implementation result, reference its authoritative producing plan rather than planning a second owner.
-A plan may appear under multiple use-case views while retaining one authoritative plan state.
+When a required responsibility is already established on the relevant base branch, reference the current requirements/design canon and verified repository behavior. Keep the producing plan as historical context when useful.
+When implementation of a prerequisite result is still pending, reference its authoritative producing plan as the one pending owner and record a direct dependency using ordinary planning rules. When a completed producing plan's result awaits integration into the relevant base branch, track that integration requirement using ordinary planning rules.
+A current plan may appear under multiple use-case views while retaining one authoritative plan state.
 Use `diagonal-progress-planning` to resolve newly discovered shared-result relationships and cross-use-case prerequisites.
 
 ## Preserve useful behavioral progress
