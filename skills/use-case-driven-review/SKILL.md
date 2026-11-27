@@ -1,13 +1,13 @@
 ---
 name: use-case-driven-review
-description: Review implementation progress by selecting the behavioral test-evidence scope for newly established, affected, and combined concrete user-facing use cases and applying focused evidence review at the earliest step where their required behavior is established.
+description: Review implementation progress by selecting evidence for newly established or affected use cases and for combined behavior as soon as its use cases are established.
 ---
 
 # Use-Case-Driven Review
 
-Use this skill when reviewing implementation progress against concrete user-facing use cases.
+Review each implementation step against the concrete user-facing behavior it establishes or affects.
 
-Use concrete user-facing use cases as the units for relating implementation steps to behavior that must remain covered.
+## Select the behavior for this step
 
 For each use case established by the current implementation step, include every behavior the use case is responsible for preserving in the current test-evidence review.
 
@@ -16,6 +16,8 @@ For each previously established use case affected by the implementation step, in
 For behavior that emerges from combining use cases, assign its test-evidence review to the earliest implementation step where all participating use cases are established.
 Review each implementation step against behavior whose required use cases are established by that step.
 Carry later combined behavior with its assigned future step.
+
+## Review the selected evidence
 
 Use the resulting behavior set to select the settled required test definitions that fall within the surrounding review scope.
 Apply `test-evidence-review` to those definitions.
