@@ -1,15 +1,14 @@
 ---
 name: use-case-driven-planning
-description: Plan concrete user-facing use cases by decomposing behavior into independently verifiable partial results and using shared diagonal progress planning for one or more use cases.
+description: Plan or revise concrete user-facing use cases as independently verifiable partial results. Apply diagonal progress planning across one or more use cases.
 ---
 
 # Use-Case-Driven Planning
 
-Use this skill when creating or revising implementation plans for concrete user-facing use cases.
+Use each concrete user-facing use case as a completion target when creating or revising implementation plans.
 
-Use a concrete user-facing use case as the completion target for relating implementation progress to observable behavior.
-Use ordinary `plan-driven-planning` for settled design provenance, implementation-plan structure, dependencies, authoritative state, and concurrency constraints.
-Apply `diagonal-progress-planning` to arrange and revise useful staged progress, whether one or several use cases are being planned. Its cross-use-case coordination applies when multiple use cases are relevant.
+- Apply `plan-driven-planning` for settled design provenance, plan structure, dependencies, authoritative state, and concurrency constraints.
+- Apply `diagonal-progress-planning` to stage partial results for one or more use cases. Coordinate across use cases when several are relevant.
 
 ## Plan the use-case boundary
 
