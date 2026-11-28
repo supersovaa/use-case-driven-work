@@ -1,6 +1,6 @@
 ---
 name: use-case-driven-planning
-description: Plan or revise concrete user-facing use cases as independently verifiable partial results. Apply diagonal progress planning across one or more use cases.
+description: Create or revise implementation plans by breaking each concrete user-facing use case into independently verifiable partial results. Apply diagonal progress planning across one or more use cases.
 ---
 
 # Use-Case-Driven Planning
