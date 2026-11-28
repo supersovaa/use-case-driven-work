@@ -1,11 +1,11 @@
 ---
 name: use-case-driven-review
-description: Review implementation progress by selecting evidence for newly established or affected use cases and for combined behavior as soon as its use cases are established.
+description: Use when reviewing implementation progress in terms of concrete user-facing use cases.
 ---
 
 # Use-Case-Driven Review
 
-Review each implementation step against the concrete user-facing behavior it establishes or affects.
+At each implementation step, select evidence for the use cases it establishes or affects. Include combined behavior at the earliest step where its participating use cases are established.
 
 ## Select the behavior for this step
 
